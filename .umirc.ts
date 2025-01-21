@@ -5,5 +5,9 @@ export default defineConfig({
     { path: "/", component: "index" },
     { path: "/docs", component: "docs" },
   ],
-  npmClient: 'npm',
+  npmClient: "npm",
+  publicPath: "Umi-test",
+  history: {
+    type: "hash",
+  },
 });
