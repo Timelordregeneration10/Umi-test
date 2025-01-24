@@ -61,6 +61,8 @@ jobs:
         run: nohup ${{ steps.detect-package-manager.outputs.runner }} dev &
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
+        with:
+          path: ./out
 
   # Deployment job
   deploy:
