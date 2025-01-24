@@ -58,7 +58,7 @@ jobs:
       - name: Install dependencies
         run: ${{ steps.detect-package-manager.outputs.manager }} ${{ steps.detect-package-manager.outputs.command }}
       - name: Build with Umi.js
-        run: ${{ steps.detect-package-manager.outputs.runner }} dev
+        run: nohup ${{ steps.detect-package-manager.outputs.runner }} dev &
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
 
